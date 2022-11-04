@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { PokeTypesComponent } from './poke-types/poke-types.component';
+import { PokemonsComponent } from './pokemons/pokemons.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokeTypesComponent,
+    PokemonsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
