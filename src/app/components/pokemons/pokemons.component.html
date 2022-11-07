@@ -1,1 +1,5 @@
-<p>pokemons works!</p>
+<ul>
+    <li *ngFor="let pokemon of pokemons">
+        <app-card [pokemon]="pokemon"></app-card>
+    </li>
+</ul>

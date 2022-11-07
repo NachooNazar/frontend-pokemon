@@ -1,0 +1,28 @@
+.navBar{
+    height: 12vh;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text);
+}
+.nav--title{
+    color: var(--medium);
+    font-weight: bold; 
+    font-size: 1.8rem;
+}
+.nav--container{
+    display: flex;
+    gap: 5rem;
+    font-size: 1.2em;
+}
+.container--selectors{
+    display: flex;
+    gap: 1rem;
+}
+.container--select{
+   display: flex;
+   gap: 0.4rem;
+}
