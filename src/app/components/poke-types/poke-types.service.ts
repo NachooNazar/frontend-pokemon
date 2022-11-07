@@ -8,8 +8,8 @@ import pokeTypes from 'src/types/pokeTypes';
 })
 export class PokeTypesService {
 
-  private baseUrl= "http://localhost:8080/api/type";
-  
+  private baseUrl= "/api/type";
+
   constructor(private httpClient : HttpClient) { }
 
   getTypes():Observable<pokeTypes[]>{

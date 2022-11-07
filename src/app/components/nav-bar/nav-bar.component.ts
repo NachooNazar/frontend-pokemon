@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import pokeTypes from 'src/types/pokeTypes';
+import { PokeTypesService } from '../poke-types/poke-types.service';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  types:pokeTypes[]= [];
+
+  constructor(private pokeTypesService: PokeTypesService) { }
 
   ngOnInit(): void {
+    this.getType()
+  }
+
+   getType(){
+    this.pokeTypesService.getTypes().subscribe(dato => {
+      this.types = dato;
+    })
   }
 
 }
