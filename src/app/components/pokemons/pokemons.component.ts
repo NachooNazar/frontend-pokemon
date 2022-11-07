@@ -16,11 +16,13 @@ export class PokemonsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPokemons();
+    
   }
 
   private getPokemons() {
     this.PokemonsServices.getPokemons().subscribe(p => {
       this.pokemons = p;
+      console.log(this.pokemons)
     });
   }
 

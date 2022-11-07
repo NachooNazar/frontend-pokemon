@@ -1,24 +1,21 @@
-<div>
+<div class="card-container">
+  <div class="fontTitle">
+    {{ pokemon.name }}
+  </div>
+  <div class="container--img">
+    <img src="{{ pokemon.image }}" class="card--img" />
+  </div>
+  <div class="fontText card--container__stats">
     <div>
-        {{pokemon.name}}
+      <label class="label--stats">attack: {{ pokemon.attack }}</label>
+      <label class="label--stats">Defense:{{ pokemon.defense }}</label>
     </div>
     <div>
-        <img src={{pokemon.image}}/>
+      <label class="label--stats">Hp: {{ pokemon.hp }}</label>
+      <label class="label--stats">Speed: {{ pokemon.speed }}</label>
     </div>
-    <div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-    </div>
-    <div>
-        <ul>
-            <li *ngFor="let type in pokemon.types">
-                <p *ngIf="type">{{type.name}}</p>
-            </li>
-           
-        </ul>
-    </div>
+  </div>
+  <div class="fontText container--types">
+      <li *ngFor="let type of pokemon.types">{{ type.name }}</li>
+  </div>
 </div>
