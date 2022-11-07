@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.fontTitle{
+    font-family: 'Nunito', sans-serif;
+}
+.fontText{
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --primary: #021740;
+    --secundary:#022840;
+    --medium:#F2E0BD;
+    --fourth:#F2B366;
+    --text: #F2F2F2;
+}
