@@ -1,5 +1,8 @@
-<ul>
-    <li *ngFor="let pokemon of pokemons">
+<div class="container--pokemons">
+<ul class="pokemons">
+    <li *ngFor="let pokemon of pokemons" class="pokemons--container">
         <app-card [pokemon]="pokemon"></app-card>
     </li>
 </ul>
+</div>
+
