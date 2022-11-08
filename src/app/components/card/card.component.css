@@ -2,22 +2,25 @@
     background-color: var(--fourth);
     display: flex;
     flex-direction: column;
-    width: 12rem;
+    width: 13rem;
     align-items: center;
     border-radius: 1rem;
+    padding: 1rem 0 1rem 0;
+    gap: 1rem;
 }
 
 .container--img{
-    border: 4px;
-    border-color: black;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    width: 9rem;
 }
-.card--img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    clip: rect(0px, 50px);
 
+.card--img{
+    
+    
 }
+
 .card--container__stats{
     display: flex;
     gap: 2rem;
