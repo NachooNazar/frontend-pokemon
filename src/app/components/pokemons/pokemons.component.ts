@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { PokemonsService } from './pokemons.service';
+import { Component, Input, OnInit } from '@angular/core';
 import Pokemon from '../../types/pokemon.type';
 
 
@@ -10,20 +9,16 @@ import Pokemon from '../../types/pokemon.type';
   styleUrls: ['./pokemons.component.css'],
 })
 export class PokemonsComponent implements OnInit {
-  pokemons: Pokemon[] = [];
 
-  constructor(private PokemonsServices: PokemonsService) { }
+  @Input() pokemons: Pokemon[];
 
-  ngOnInit(): void {
-    this.getPokemons();
-    
+  constructor() {
+    this.pokemons=[];
+  }    
+  
+
+  ngOnInit(): void {    
   }
 
-  private getPokemons() {
-    this.PokemonsServices.getPokemons().subscribe(p => {
-      this.pokemons = p;
-      console.log(this.pokemons)
-    });
-  }
 
 }

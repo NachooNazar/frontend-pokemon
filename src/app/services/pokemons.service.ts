@@ -16,5 +16,9 @@ export class PokemonsService {
   getPokemons():Observable<Pokemon[]>{
     return this.httpClient.get<Pokemon[]>(`${this.baseUrl}`);
   }
+
+  filterPokemons(type:string):Observable<Pokemon[]>{
+    return this.httpClient.get<Pokemon[]>(this.baseUrl + "/getByType/" + type)
+  }
   
 }

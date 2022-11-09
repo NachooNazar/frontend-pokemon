@@ -14,8 +14,8 @@
         <label>Filters</label>
     </div>
   <div class="container--select fontTitle">
-    <select name="" id="" >
-      <option value={{type.name}} *ngFor="let type of types" >{{type.name}}</option>
+    <select name="" id="" [(ngModel)]="selected">
+      <option value={{type.name}} *ngFor="let type of types" (click)="filterType()" >{{type.name}}</option>
     </select>
   </div>
   <div class="container--select fontTitle">
