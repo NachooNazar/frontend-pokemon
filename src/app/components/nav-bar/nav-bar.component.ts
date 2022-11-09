@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import pokeTypes from 'src/types/pokeTypes';
+import pokemonType from 'src/app/types/pokemonType.type';
 import { PokeTypesService } from '../poke-types/poke-types.service';
 import { Output, EventEmitter } from '@angular/core';
 
@@ -8,9 +8,9 @@ import { Output, EventEmitter } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit{
 
-  types:pokeTypes[]= [];
+  types:pokemonType[]= [];
 
   //este evento lo voy a utilizar en la home para traerme el tipo seleccionado
   @Output() newItemEvent = new EventEmitter<string>();

@@ -1,5 +1,5 @@
 <nav class="navBar">
-  
+
   <ul class="nav--container fontTitle">
     <li class="nav--title">PokeJV</li>
     <li>Home</li>
@@ -23,5 +23,7 @@
       <option value="attacks">All</option>
     </select>
   </div>
+
+  <div *ngIf="selected">{{selected}}</div>
 </div>
 </nav>

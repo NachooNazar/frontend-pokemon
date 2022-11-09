@@ -10,11 +10,23 @@ import Pokemon from 'src/app/types/pokemon.type';
 export class PokemonsService {
 
   private baseUrl= "/api/pokemon";
-  
+
   constructor(private httpClient : HttpClient) { }
 
+  getBaseUrl():String{
+    return this.baseUrl;
+  }
+
+  getHttpClient():HttpClient{
+    return this.httpClient;
+  }
+
   getPokemons():Observable<Pokemon[]>{
-    return this.httpClient.get<Pokemon[]>(`${this.baseUrl}`);
+    return this.httpClient.get<Pokemon[]>(`${this.getBaseUrl()}`);
+  }
+
+  getPokemonsByType(type:String):Observable<Array<Pokemon>>{
+    return this.getHttpClient().get<Pokemon[]>(`${this.getBaseUrl()}/getByType/${type}`)
   }
 
   filterPokemons(type:string):Observable<Pokemon[]>{
