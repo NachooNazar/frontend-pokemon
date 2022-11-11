@@ -1,29 +1,37 @@
 <nav class="navBar">
-
   <ul class="nav--container fontTitle">
     <li class="nav--title">PokeJV</li>
-    <li>Home</li>
-    <form action="">
-        <input type="text" name="" id="">
-        <button>🔎</button>
-    </form>
+    <li routerLink="/home">Home</li>
+    <div>
+      <input type="text" name="" id="" [(ngModel)]="name"/>
+      <button (click)="filterName()">buscar</button>
+    </div>
+
     <li>Create pokemon</li>
   </ul>
-  <div class="container--selectors fontTitle ">
+  <div class="container--selectors fontTitle">
     <div>
-        <label>Filters</label>
+      <label>Filters</label>
     </div>
-  <div class="container--select fontTitle">
-    <select name="" id="" [(ngModel)]="selected">
-      <option value={{type.name}} *ngFor="let type of types" (click)="filterType()" >{{type.name}}</option>
-    </select>
-  </div>
-  <div class="container--select fontTitle">
-    <select name="" id="">
-      <option value="attacks">All</option>
-    </select>
-  </div>
+    <div class="container--select fontTitle">
+      <select name="" id="" [(ngModel)]="selected">
+        <option value="all" (click)="filterType()">All</option>
+        <option
+          value="{{ type.name }}"
+          *ngFor="let type of types"
+          (click)="filterType()"
+        >
+          {{ type.name }}
+        </option>
+      </select>
+    </div>
+    <div class="container--select fontTitle">
+      <select name="" id="">
+        <option value="all">All</option>
+        <option value="low"></option>
+      </select>
+    </div>
 
-  <div *ngIf="selected">{{selected}}</div>
-</div>
+    <div *ngIf="selected">{{ selected }}</div>
+  </div>
 </nav>

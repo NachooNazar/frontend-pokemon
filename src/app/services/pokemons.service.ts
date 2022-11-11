@@ -32,5 +32,14 @@ export class PokemonsService {
   filterPokemons(type:string):Observable<Pokemon[]>{
     return this.httpClient.get<Pokemon[]>(this.baseUrl + "/getByType/" + type)
   }
+
+  filterPokemonByName(name:string):Observable<Pokemon>{
+    let pokemon= this.httpClient.get<Pokemon>(this.baseUrl + "/search/" + name)
+    return pokemon
+  }
+
+  getPokemonById(id:number):Observable<Pokemon>{
+  return this.httpClient.get<Pokemon>(this.baseUrl + "/detail/" + id)
+  }
   
 }

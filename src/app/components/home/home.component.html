@@ -1,5 +1,5 @@
 <div class="app-container">
-    <app-nav-bar (newItemEvent)="filterType($event)"></app-nav-bar>
+    <app-nav-bar (newItemEvent)="filterType($event)" (EventName)="filterName($event)"></app-nav-bar>
     <div>
       <app-pokemons [pokemons]="pokemons" ></app-pokemons>
     </div>

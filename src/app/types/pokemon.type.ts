@@ -1,6 +1,7 @@
 import pokemonType from "./pokemonType.type"
 
 export default interface Pokemon{
+    id:number
     name:string|null,
     image:string|null,
     weight:number|null,
@@ -9,5 +10,5 @@ export default interface Pokemon{
     speed:number|null,
     defense:number|null,
     attack:number|null,
-    types:pokemonType[]|null
+    types:pokemonType[] | null 
 }

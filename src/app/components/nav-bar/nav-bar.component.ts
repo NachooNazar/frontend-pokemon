@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import pokemonType from 'src/app/types/pokemonType.type';
 import { PokeTypesService } from '../poke-types/poke-types.service';
 import { Output, EventEmitter } from '@angular/core';
+import { Route } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,12 +15,13 @@ export class NavBarComponent implements OnInit{
 
   //este evento lo voy a utilizar en la home para traerme el tipo seleccionado
   @Output() newItemEvent = new EventEmitter<string>();
+  @Output() EventName = new EventEmitter<string>();
   @Input() selected: string= "";
+  @Input() name: string= "";
 
   constructor(private pokeTypesService: PokeTypesService) {}
-
   ngOnInit(): void {
-    this.getType()
+    this.getType();
   }
    
   //trae todos los tipos
@@ -32,7 +34,10 @@ export class NavBarComponent implements OnInit{
   //envia el value del option a la home
   filterType(){
     this.newItemEvent.emit(this.selected)
-    console.log(this.selected)
+  }
+
+  filterName(){
+    this.EventName.emit(this.name)
   }
 
 }

@@ -16,7 +16,6 @@ export class PokemonsComponent implements OnInit {
     this.pokemons=[];
   }    
   
-
   ngOnInit(): void {}
 
 

@@ -1,0 +1,46 @@
+<div>
+    <app-nav-bar></app-nav-bar>
+<div ngClass="{{ types }} detail fontTitle">
+  <div ngClass="detail-container">
+    <!-- contenedor de datos de la izquierda -->
+    <div ngClass="container-izq ">
+      <div>
+        <div>
+          <h3>#{{ pokemon.id }}</h3>
+        </div>
+        <div>
+          <h2 ngClass="fontMust name">{{ pokemon.name }}</h2>
+        </div>
+      </div>
+      <div ngClass="detail-aspect">
+        <h4>Heigth: {{ pokemon.height }}</h4>
+        <h4>Weigth: {{ pokemon.weight }}</h4>
+      </div>
+    </div>
+    <!-- contenedor de la imagen, div del medio -->
+    <div ngClass="container-mid">
+      <img src="{{ pokemon.image }}" alt="pokeimg" ngClass="poke-img"/>
+    </div>
+    <!-- contenedor de datos de la derecha -->
+    <div ngClass="container-der">
+      <div ngClass="container-types">
+        <h4 *ngFor="let poke of pokemon.types" ngClass="detail-types fontMust {{poke.name}}">{{ poke.name }}</h4>
+      </div>
+      <div ngClass="container--stats">
+        <div>
+          <h3 ngClass="fontMust title-stats">Base Stats</h3>
+        </div>
+        <div ngClass="container-stats__line">
+            <div ngClass="line"></div>
+        <div ngClass="container-stats">
+          <h4 ngClass="stat">Hp: {{ pokemon.hp }}</h4>
+          <h4 ngClass="stat">Attack: {{ pokemon.attack }}</h4>
+          <h4 ngClass="stat">Defense: {{ pokemon.defense }}</h4>
+          <h4 ngClass="stat">Speed: {{ pokemon.speed }}</h4>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

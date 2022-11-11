@@ -11,10 +11,11 @@ export class HomeComponent implements OnInit {
 
   pokemons: Pokemon[]= [];
 
+
   constructor(private PokemonsServices: PokemonsService) { }
 
   ngOnInit(): void {
-    this.getPokemons();
+   this.getPokemons()
   }
   
   private getPokemons():void {
@@ -24,10 +25,16 @@ export class HomeComponent implements OnInit {
   }
 
    filterType(type:string):void{
+    if(type !== "all"){
     this.PokemonsServices.filterPokemons(type).subscribe(p =>{
       this.pokemons = p;
-      console.log(this.pokemons)
-    })
+    })}else{
+      this.getPokemons()
+    }
   }
 
+  filterName(name:string):void{
+    console.log(name)
+    this.PokemonsServices.filterPokemonByName(name).subscribe(p => this.pokemons= [p]);
+  }
 }

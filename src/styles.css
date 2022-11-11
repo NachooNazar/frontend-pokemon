@@ -9,6 +9,10 @@
 .fontTitle{
     font-family: 'Nunito', sans-serif;
 }
+.fontMust{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
 .fontText{
     font-family: 'Roboto', sans-serif;
 }
@@ -18,4 +22,60 @@
     --medium:#F2E0BD;
     --fourth:#F2B366;
     --text: #F2F2F2;
+}
+
+
+.normal{
+    background-color: #DDCCAA ;
+}
+.fighting{
+    background-color: #FF6A6A;
+}
+.flying{
+    background-color: #BAAAFF;
+}
+.poison{
+    background-color: #CC88BB;
+}
+.ground{
+    background-color:  	#DEB887;
+}
+.rock{
+    background-color:#CD853F;
+}
+.bug{
+    background-color:#7dad3f;
+}
+.steel{
+    background-color: #CCCCCC;
+}
+.fire{
+    background-color:#FF7F00;
+}
+.water{
+   background-color: #b6cbe6;
+}
+.grass{
+    background-color: #528b9c;
+}
+.electric{
+    background-color:#FFD700;
+}
+.psychic{
+    background-color:  	#FFB5C5;
+}
+.ice{
+    background-color: #ADD8E6;
+}
+.dragon{
+    background-color: #AB82FF;
+}
+.dark{
+    background-color: #A9A9A9;
+}
+.fairy{
+    background-color: #FFB0FF;
+}
+.default{
+    background-color: var(--fourth);
 }
